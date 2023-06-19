@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 90vh;
+  width: 90%;
+}
+.handler {
+  height: inherit;
+  width: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 0.5;
+  border-radius: 50px;
+  cursor: pointer;
+
+  position: relative;
+  transition: all 700ms ease-in;
+}
+.handler.active {
+  flex: 5;
+}
+.handler h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  font-weight: 700;
+  color: #fff;
+}
+
+.card1 {
+  background-image: url("./assets/image1.avif");
+}
+.card2 {
+  background-image: url("./assets/image2.avif");
+}
+.card3 {
+  background-image: url("./assets/image3.avif");
+}
+.card4 {
+  background-image: url("./assets/image4.avif");
+}
+.card5 {
+  background-image: url("./assets/image5.avif");
+}
+
+h2 {
+  opacity: 0;
+  transition: all 0.3s linear 0.4s;
+}
+h2.active {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .handler:nth-child(3n + 1) {
+    display: none;
+  }
+}
